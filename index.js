@@ -20,6 +20,15 @@ const port = process.env.PORT || 3000; /* Server Port */
 server.listen(port, () => console.log(`Server's Running - Port: ${port}`)); /* Start the Server */
 
 /* Initial Route */
+server.get('/', (req, res) => {
+	return res.status(200).render('index', {
+		year: new Date().getFullYear(),
+		version: 'pt',
+		success: false
+	});
+});
+
+/* Initial Route with Version */
 server.get('/:version', (req, res) => {
 	const year = new Date().getFullYear();
 	const version = req.params.version || '';
@@ -32,6 +41,7 @@ server.get('/:version', (req, res) => {
 	}
 });
 
+/* Send E-mail Route */
 server.post('/mail', async (req, res) => {
 	try {
 
