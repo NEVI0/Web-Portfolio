@@ -164,22 +164,13 @@ body {
     color: #18e09a;
 }
 
-.img-box {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-.img-box img {
+.despesas-img {
     width: 15rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5)
 }
 
-.img-box.mobile img {
-    width: 30rem;
+.imgs-box {
+    text-align: center;
 }
 
 /* Contact Section */
